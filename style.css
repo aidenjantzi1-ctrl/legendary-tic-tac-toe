@@ -34,11 +34,7 @@ body {
   margin: 0;
   color: var(--text);
   font-family: var(--font);
-  background:
-    radial-gradient(1200px 700px at 10% 10%, rgba(124, 92, 255, 0.26), transparent 55%),
-    radial-gradient(900px 600px at 95% 30%, rgba(34, 197, 94, 0.18), transparent 60%),
-    radial-gradient(850px 700px at 50% 110%, rgba(59, 130, 246, 0.16), transparent 60%),
-    linear-gradient(180deg, var(--bg0), var(--bg1));
+  background: #ffffff;
   display: grid;
   place-items: center;
   padding: 28px 18px;
@@ -46,7 +42,7 @@ body {
 
 .app {
   width: min(860px, 100%);
-  background: linear-gradient(180deg, rgba(255, 255, 255, 0.08), rgba(255, 255, 255, 0.04));
+  background: linear-gradient(180deg, rgba(10, 14, 28, 0.9), rgba(10, 14, 28, 0.82));
   border: 1px solid var(--border);
   border-radius: var(--radius);
   box-shadow: var(--shadow);
