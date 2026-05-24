@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tic-Tac-Toe</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <main class="app" aria-label="Tic-Tac-Toe">
+      <header class="topbar">
+        <div class="brand">
+          <div class="logo" aria-hidden="true"></div>
+          <div>
+            <h1>Tic-Tac-Toe</h1>
+            <p class="subtitle">Player vs AI</p>
+          </div>
+        </div>
+
+        <div class="controls" aria-label="Game controls">
+          <label class="field">
+            <span>Mode</span>
+            <select id="mode" aria-label="Game mode">
+              <option value="regular" selected>Regular</option>
+              <option value="ultimate">Ultimate</option>
+            </select>
+          </label>
+
+          <label class="field">
+            <span>Difficulty</span>
+            <select id="difficulty" aria-label="AI difficulty">
+              <option value="easy">Easy</option>
+              <option value="medium" selected>Medium</option>
+              <option value="hard">Hard</option>
+            </select>
+          </label>
+
+          <button id="newGame" class="btn primary" type="button">New game</button>
+          <button id="hintBtn" class="btn" type="button">Hint</button>
+        </div>
+      </header>
+
+      <section class="boardWrap" aria-label="Game board">
+        <div id="status" class="status" role="status" aria-live="polite"></div>
+
+        <div id="board" class="board" role="grid" aria-label="Game grid"></div>
+
+        <div class="advantage" aria-label="Who is winning indicator">
+          <div class="advTop">
+            <div id="advLabel" class="advLabel">Even</div>
+            <div id="advPct" class="advPct">50-50</div>
+          </div>
+          <div class="advBar" role="meter" aria-valuemin="0" aria-valuemax="100" aria-valuenow="50">
+            <div id="advFill" class="advFill"></div>
+          </div>
+        </div>
+      </section>
+
+      <footer class="footer">
+        <div class="hint">
+          You are <span class="chip x">X</span>. AI is <span class="chip o">O</span>.
+        </div>
+        <div class="kbd">
+          Tip: Use <span class="key">Tab</span> + <span class="key">Enter</span> to play.
+        </div>
+      </footer>
+    </main>
+
+    <dialog id="resultDialog" class="dialog">
+      <div class="dialogBody">
+        <h2 id="resultTitle">Game over</h2>
+        <p id="resultText" class="muted"></p>
+        <div class="dialogActions">
+          <button id="playAgain" class="btn primary" type="button">Play again</button>
+          <button id="closeDialog" class="btn" type="button">Close</button>
+        </div>
+      </div>
+    </dialog>
+
+    <script src="./script.js" defer></script>
+  </body>
+</html>
